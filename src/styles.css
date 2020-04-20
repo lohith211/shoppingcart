@@ -1,1 +1,403 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+  background-color: #eee;
+}
+
+* {
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  font-size: 27px;
+  font-family: "Roboto";
+  font-weight: 600;
+  z-index: -1;
+}
+
+.buttons {
+  max-width: 92%;
+  width: 900px;
+  text-align: right;
+  margin: 20px auto 0;
+  padding-right: 3%;
+}
+
+
+
+.wrapper {
+  max-width: 92%;
+  width: 900px;
+  margin: 10px auto 40px;
+  padding: 20px 20px 0;
+  background-color: #ddd;
+  font-family: Roboto;
+  position: relative;
+  overflow: hidden;
+}
+
+.item {
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 2px;
+  box-shadow: 0px 1px 3px #bbb;
+}
+
+img {
+  display: inline-block;
+  float: left;
+  max-height: 90%;
+  max-width: 90%;
+  padding: 1.2%;
+  position: relative;
+}
+
+a {
+  display: block;
+  transition: 0.2s;
+}
+
+a:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+h2 {
+  transition: 0.2s;
+}
+
+h2:hover {
+  color: #666;
+  cursor: pointer;
+}
+
+span {
+  font-size: 24px;
+}
+
+span.price {
+  color: orange;
+}
+
+.list .item {
+  /* width: 100%; */
+  margin: 0 auto 20px;
+}
+
+.list img {
+  max-width: 30%;
+}
+
+.list .details {
+  float: left;
+  max-width: 66%;
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+.grid .item {
+  width: 32%;
+  margin: 0 2% 20px 0;
+  float: left;
+  text-align: center;
+}
+
+.grid .item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.grid img {
+  padding-top: 0;
+  max-width: 90%;
+  margin: 0 auto;
+  float: none;
+}
+
+.grid h2 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.grid span {
+  display: inline-block;
+  margin-top: -6px;
+  font-size: 19px;
+}
+
+.grid .details {
+  float: none;
+  max-width: 90%;
+  margin: -20px auto 0;
+}
+
+.grid .details p {
+  margin-top: 8px;
+}
+
+
+.cart {
+  background: #28a745 !important;
+  color: #FFF;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+
+}
+
+.itembrand {
+  color: darkgreen;
+  padding-bottom: 10px;
+  font-weight: bolder;
+}
+
+.itemproduct {
+
+  padding-bottom: 10px;
+  font-weight: 300;
+}
+
+.itemothers {
+  padding-bottom: 5px;
+  font-weight: 300;
+
+}
+
+.qtyincdec {
+  border-radius: 25px;
+  border: 0;
+  margin-left: 15px;
+
+}
+
+.qtytext {
+  width: 30px;
+  position: relative;
+  margin-left: 10px;
+
+  height: 30px;
+  padding: 2px 5px;
+  display: inline-block;
+  border: none;
+}
+
+input:disabled {
+  color: black;
+  background: white;
+}
+
+.offers {
+  position: absolute;
+  top: 179px;
+  left: 90px;
+
+  /*position: relative;
+  top: 188px;
+  right: 176px;*/
+
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .offers {
+
+    position: absolute;
+    top: 95px;
+    left: 15px;
+  }
+
+  .col-12 {
+
+    max-width: 74%;
+  }
+
+  .qtyincdec {
+
+    margin-left: 0 !important;
+
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+
+    .col-12 {
+
+      max-width: 100%;
+    }
+
+    .qtyincdec {
+
+      margin-left: 15px !important;
+
+    }
+
+    .offers {
+      position: absolute;
+      top: 170px;
+      left: 90px;
+    }
+
+
+    .list .item {
+      width: 95%;
+      margin: 0 0 20px;
+    }
+
+    .wrapper {
+      max-width: 99%;
+    }
+
+    .qtytotal {
+      width: 92%;
+    }
+
+  }
+
+  .qtytext {
+    width: 25px !important;
+  }
+
+
+}
+
+/* Modal Popup */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 65%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 10px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {
+  padding: 16px 16px;
+}
+
+.checkout {
+  float: right;
+  color: white;
+  background: #28a745 !important;
+  color: #FFF;
+  padding: 9px 20px;
+  font-size: 14px;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  font-weight: bold;
+  position: relative;
+  bottom: 16px;
+  text-transform: uppercase;
+}
+
+.qtytotal {
+  background-color: white;
+  padding: 10px;
+
+}
+
+.header {
+  background-color: #343a40 !important;
+  color: white;
+  padding: 16px;
+  width: 100%;
+
+}
+
+.headertitle {
+  margin-right: 10px;
+}
+
+.footer {
+  background-color: #343a40 !important;
+  color: white;
+  padding: 8px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+}
+
+.footertitle {
+  margin-right: 10px;
+}
+
+.clearfix {
+  margin-top: 10px;
+}
+
+.parent {
+  position: relative;
+  width: 100%
+}

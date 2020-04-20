@@ -1,0 +1,104 @@
+{
+  "productlist": [{
+      "id": 1,
+      "Brandname": "Milk food",
+      "Productname": "Milk Food Rich Desi Danedar Ghee",
+      "quantity": "1ltr",
+      "Price": "400",
+      "MRP": "450",
+      "image": "../assets/images/image1.jpg",
+      "OfferText": "18% OFF"
+    },
+
+    {
+      "id": 2,
+      "Brandname": "Grofers Mother's Choice",
+      "Productname": "Grofers Mother's Choice Desi Gheee",
+      "quantity": "1ltr",
+      "Price": "400",
+      "MRP": "450",
+      "image": "../assets/images/image2.jpg",
+      "OfferText": "15% OFF"
+    },
+    {
+      "id": 3,
+      "Brandname": "Patanjali",
+      "Productname": "patanjali shampoo",
+      "quantity": "1ltr",
+      "Price": "400",
+      "MRP": "450",
+      "image": "../assets/images/image3.jpg",
+      "OfferText": "18% OFF"
+    },
+    {
+      "id": 4,
+      "Brandname": "Predator",
+      "Productname": "laptop A-4567 model",
+      "quantity": "1ltr",
+      "Price": "400",
+      "MRP": "450",
+      "image": "../assets/images/image4.jpg",
+      "OfferText": "18% OFF"
+    },
+    {
+      "id": 5,
+      "Brandname": "HP Pavilion",
+      "Productname": "HP Laptop",
+      "quantity": "1ltr",
+      "Price": "400",
+      "MRP": "450",
+      "image": "../assets/images/image5.jpg",
+      "OfferText": "18% OFF"
+    },
+    {
+      "id": 6,
+      "Brandname": "Apple Macbook",
+      "Productname": "Macbook Air",
+      "quantity": "1ltr",
+      "Price": "400",
+      "MRP": "450",
+      "image": "../assets/images/image6.jpg",
+      "OfferText": "18% OFF"
+    },
+    {
+      "id": 7,
+      "Brandname": "Asus",
+      "Productname": "Asus Notebook",
+      "quantity": "1ltr",
+      "Price": "400",
+      "MRP": "450",
+      "image": "../assets/images/image1.jpg",
+      "OfferText": "18% OFF"
+    },
+    {
+      "id": 8,
+      "Brandname": "MS Surface Pro",
+      "Productname": "Ms Surface",
+      "quantity": "1ltr",
+      "Price": "400",
+      "MRP": "450",
+      "image": "../assets/images/image3.jpg",
+      "OfferText": "18% OFF"
+    },
+    {
+      "id": 9,
+      "Brandname": "vivoBook",
+      "Productname": "Vivobook air",
+      "quantity": "1ltr",
+      "Price": "400",
+      "MRP": "450",
+      "image": "../assets/images/image5.jpg",
+      "OfferText": "18% OFF"
+    },
+    {
+      "id": 10,
+      "Brandname": "Sony",
+      "Productname": "Sony air",
+      "quantity": "1ltr",
+      "Price": "400",
+      "MRP": "450",
+      "image": "../assets/images/image6.jpg",
+      "OfferText": "18% OFF"
+    }
+  ]
+}

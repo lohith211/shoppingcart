@@ -1,0 +1,63 @@
+<div class="wrapper list" *ngIf="products">
+  <div class="item" *ngFor="let product of products.productlist">
+    <img src="{{product.image}}" />
+    <div class="parent">
+      <div class="offers">
+        <p>{{product.OfferText}}</p>
+      </div>
+    </div>
+
+
+
+    <div class="details">
+      <span id="id" style="display:none;">{{product.id}}</span>
+      <h2 class="itembrand">{{product.Brandname}}</h2>
+      <h3 class="itemproduct">{{product.Productname}}</h3>
+      <h4 class="itemothers">{{product.quantity}}</h4>
+      <h4 class="itemothers">{{product.MRP}}</h4>
+      <h4 class="itemothers"><B>Rs &nbsp;{{product.Price}}</B></h4>
+      <div class="col-12">
+        <input type="hidden" value="{{product.Price}}" #price>
+        <button class="cart" (click)="addtocart(qty,price)">Add to cart</button>
+        <button class="qtyincdec cart " (click)="increment(qty,price)">+</button>
+        <input type="number" class="qtytext" value="0" #qty disabled>
+        <button class="qtyincdec cart" (click)="decrement(qty,price)">-</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="qtytotal">
+    <span>Qty {{totalqty}}</span><br>
+    <span>Total {{totalprice}}</span>
+    <button id="checkout" class="checkout" (click)="checkoutmodal()">Check Out</button>
+  </div>
+
+
+
+  <!-- The Modal -->
+  <div class="modal" #modaldailog>
+
+    <!-- Modal content -->
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" (click)="closemodal()">&times;</span>
+        <h2>Checkout</h2>
+
+      </div>
+      <div class="modal-body">
+        <p>Total: {{totalprice}}</p>
+        <p>Transaction Successfull</p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+</div>

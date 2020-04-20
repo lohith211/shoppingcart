@@ -14,15 +14,4 @@ export class ProductService {
 		//console.log(this.API_URL + '?page=' + pageno);
 		return this.http.get('../assets/data/products.json');
 	}
-
-	// Calculate total price on item added to the cart
-	getTotalPrice() {
-		let total = 0;
-
-		this.cartItems.map((item) => {
-			total += item.price;
-		});
-
-		return total;
-	}
 }

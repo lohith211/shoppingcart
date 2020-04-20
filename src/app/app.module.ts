@@ -10,12 +10,19 @@ import { ProductService } from './services/product.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.prod';
+import { UpdateService } from './services/Update.service';
 
 @NgModule({
 	declarations: [ AppComponent, ProductlistComponent, HeaderComponent, FooterComponent ],
-	imports: [ BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }) ],
-	providers: [ ProductService ],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		FormsModule,
+		HttpClientModule,
+		ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+	],
+	providers: [ ProductService, UpdateService ],
 	bootstrap: [ AppComponent ]
 })
 export class AppModule {}
